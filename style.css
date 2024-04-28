@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Mochiy';
+    src: url('fonts/mochiy.woff2') format('woff2'),
+         url('fonts/mochiy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #fffbe7;
+    color: #333;
+}
+
+header {
+    background: #ff91a4; /* soft pink */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Mochiy', sans-serif;
+    border-bottom: 5px solid #ff6384; /* darker pink accent */
+}
+
+h1, p {
+    margin: 0;
+}
+
+section {
+    background: white;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-left: 5px solid #ff6384;
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    color: #ff6384;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 20px;
+    background: #ddd;
+    font-size: 16px;
+}
+
+button {
+    background-color: #ff6384;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ff91a4;
+}
+
+img {
+    max-width: 100%; 
+    height: auto;    
+    border-radius: 8px; 
+    margin-top: 10px;
+}
+
