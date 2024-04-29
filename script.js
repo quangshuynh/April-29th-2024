@@ -12,12 +12,12 @@ function personalizedGreeting() {
     const hour = today.getHours();
     let greeting;
 
-    if(hour < 12) {
+    if(hour < 12) {  // 12pm
         greeting = "Good morning, beautiful!";
-    } else if(hour < 18) {
-        greeting = "Good afternoon, my love!";
-    } else {
-        greeting = "Good evening, darling!";
+    } else if(hour < 18) {  // less than 6pm
+        greeting = "Good afternoon, beautiful!";
+    } else {  // after 6pm
+        greeting = "Good evening, beautiful!";
     }
 
     document.getElementById("personalGreeting").innerText = greeting;
