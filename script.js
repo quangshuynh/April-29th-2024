@@ -1,4 +1,5 @@
-  function showMessage(id) {
+/** Opening button */
+function showMessage(id) {
       var element = document.getElementById('message' + id);
       if(element.style.display === 'block') {
           element.style.display = 'none';
@@ -7,6 +8,7 @@
       }
   }
 
+/** Greeting message */
 function personalizedGreeting() {
     const today = new Date();
     const hour = today.getHours();
@@ -28,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
   displayQuestion();
 });
 
+/** Toggle music */
 function toggleMusic() {
     var music = document.getElementById('bgMusic');
     if(music.paused) {
@@ -37,11 +40,13 @@ function toggleMusic() {
     }
 }
 
+/** Volume slider */
 function setVolume(value) {
     var music = document.getElementById('bgMusic');
     music.volume = value;
 }
 
+/** Quiz */
 const questions = [
   {
       question: "Where was our first date?",
@@ -218,3 +223,64 @@ function displayResult() {
     const resultElement = document.getElementById("result");
     resultElement.textContent = `You scored ${score} out of ${questions.length}!`;
 }
+
+/** Spinny wheel */
+const canvas = document.getElementById('wheelCanvas');
+const ctx = canvas.getContext('2d');
+const activities = ["Go to the park", "Movie night", "Cooking together", "Board games", "Visit a museum", "Go hiking", "Picnic", "Beach day", "Bike ride", "Coffee date"];
+const wheelColors = ['#FFDDC1', '#FBBFAC', '#FFA6C1', '#FA99AC', '#FFB6C1', '#FFABCD', '#FFCCCC', '#FFB3BA', '#FF9999', '#FF6666'];
+
+function drawWheel() {
+    const slice = Math.PI * 2 / activities.length;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    activities.forEach((activity, index) => {
+        ctx.beginPath();
+        ctx.fillStyle = wheelColors[index];
+        ctx.moveTo(250, 250);
+        ctx.arc(250, 250, 250, slice * index, slice * (index + 1));
+        ctx.lineTo(250, 250);
+        ctx.fill();
+        ctx.stroke();
+        ctx.save();
+        ctx.translate(250, 250);
+        ctx.rotate(slice * index + slice / 2);
+        ctx.textAlign = 'right';
+        ctx.fillStyle = '#000';
+        ctx.font = '16px Arial';
+        ctx.fillText(activity, 230, 10);
+        ctx.restore();
+    });
+}
+
+function spinWheel() {
+    const spinTo = Math.floor(Math.random() * 360) + 720; // Ensures a good spin
+    const duration = 3000; // 3 seconds
+    let start = null;
+    function rotateWheel(timestamp) {
+        if (!start) start = timestamp;
+        const progress = (timestamp - start) / duration;
+        const angle = easing(progress) * spinTo;
+        ctx.save();
+        ctx.translate(250, 250);
+        ctx.rotate(angle * Math.PI / 180);
+        ctx.translate(-250, -250);
+        drawWheel();
+        ctx.restore();
+        if (progress < 1) {
+            requestAnimationFrame(rotateWheel);
+        } else {
+            const degrees = (angle % 360);
+            const sliceDegree = 360 / activities.length;
+            const selected = Math.floor((360 - degrees) / sliceDegree) % activities.length;
+            document.getElementById('wheelResult').textContent = "Result: " + activities[selected];
+        }
+    }
+    requestAnimationFrame(rotateWheel);
+}
+
+function easing(t) {
+    return (--t) * t * t * t + 1;
+}
+
+document.getElementById('spinButton').addEventListener('click', spinWheel);
+drawWheel();
