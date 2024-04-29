@@ -83,6 +83,86 @@ const questions = [
       options: ["Eat at Cheesecake Factory", "Go to Five Below", "Completed a puzzle", "All of the above"],
       correctAnswer: 3
   },
+  {
+      question: "What's the purple octupus named?",
+      options: ["Blooby", "Booby", "Poopy", "Ploopy"],
+      correctAnswer: 0
+  },
+  {
+      question: "How many kids would we want?",
+      options: ["0", "1", "2", "3+"],
+      correctAnswer: 2
+  },
+  {
+      question: "What was our third date?",
+      options: ["Movie theatre", "Ice skating", "The beach", "Eastview Mall"],
+      correctAnswer: 3 
+  },
+  {
+      question: "Where did I lose my keys on our second date?",
+      options: ["It was in my pocket", "Under the bench", "Under the ice", "It was stolen"],
+      correctAnswer: 1
+  },
+  {
+      question: "What surrounded our base in Minecraft?",
+      options: ["Trees", "Water", "Mushrooms", "Lava"],
+      correctAnswer: 2
+  },
+  {
+      question: "What's our favorite series to binge-watch?",
+      options: ["Grey's Anatomy", "Stranger Things", "Game of Thrones", "The Office"],
+      correctAnswer: 0
+  },
+  {
+      question: "What’s the first thing we cooked together?",
+      options: ["Chicken pasta", "Spaghetti", "Chicken curry", "Vegetable stir fry"],
+      correctAnswer: 0
+  },
+  {
+      question: "Which of us is the early bird?",
+      options: ["Catherine", "Quang", "Both of us", "Neither of us"],
+      correctAnswer: 1
+  },
+  {
+      question: "Who is more likely to deal with a spider in the house?",
+      options: ["Catherine", "Quang", "We both avoid it", "We call someone else to deal with it"],
+      correctAnswer: 1
+  },
+  {
+      question: "Who has the better memory?",
+      options: ["Catherine", "Quang", "Both of us", "We both have bad memory"],
+      correctAnswer: 0
+  },
+  {
+      question: "Which of us is better at keeping secrets to each other?",
+      options: ["Catherine", "Quang", "Both of us", "Neither of us"],
+      correctAnswer: 3
+  },
+  {
+      question: "Who takes longer to get ready?",
+      options: ["Catherine", "Quang", "We take the same amount of time", "We don't keep track"],
+      correctAnswer: 0
+  },
+  {
+      question: "Where do we see ourselves in 10 years?",
+      options: ["Traveling the world", "Starting a family", "Running our own business", "Living in a different country"],
+      correctAnswer: 1
+  },
+  {
+      question: "What park did we first visit togther?",
+      options: ["Cobb's Hill", "Memorial Park", "Lion's Park", "Martin Luther King Jr Memorial Park"],
+      correctAnswer: 3
+  },
+  {
+      question: "What did we do in Buffalo?",
+      options: ["Try to find a Starbucks glass tumbler", "Eat at Cheesecake Factory", "Get Dior Lip Oil", "All of the above"],
+      correctAnswer: 3
+  },
+  {
+      question: "What was our theme for halloween last year?",
+      options: ["Joe Goldberg & Love Quinn", "Ladybug & Cat Noir", "Derek Shephard & Meredith Grey", "We weren't in costume"],
+      correctAnswer: 0
+  },
 ];
 
 let currentQuestion = 0;
