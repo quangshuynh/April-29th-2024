@@ -22,9 +22,43 @@ header {
     text-align: center;
     font-family: 'Mochiy', sans-serif;
     border-bottom: 5px solid #ff6384; /* darker pink accent */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
-h1, p {
+.controls {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#musicBtn {
+    background-color: #ff6384;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px; /* Space between button and slider */
+}
+
+#musicBtn:hover {
+    background-color: #ff91a4;
+}
+
+#volumeSlider {
+    width: 100px; /* Adjust width as needed */
+}
+
+
+
+h1 {
     margin: 0;
 }
 
@@ -37,13 +71,26 @@ section {
     border-left: 5px solid #ff6384;
 }
 
+section p {
+  margin: 0;
+  font-family: "Archivo", sans-serif;
+}
+
 .hidden {
     display: none;
 }
 
 h2 {
     color: #ff6384;
+    transition: all 0.3s ease; 
+    font-family: "Amatic SC", sans-serif;
 }
+
+h2:hover {
+    color: #ff6384;
+    text-shadow: 0 2px 40px rgba(0,0,0,0.7);
+}
+
 
 footer {
     text-align: center;
@@ -56,20 +103,30 @@ button {
     background-color: #ff6384;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    transition: all 0.3s ease;
+    font-family: 'Pacifico', cursive;
 }
 
 button:hover {
-    background-color: #ff91a4;
+    background-color: #ff91a4; 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
 }
 
+
 img {
-    max-width: 100%; 
-    height: auto;    
-    border-radius: 8px; 
-    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
+
+img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); 
+}
+
 

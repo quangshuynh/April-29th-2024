@@ -6,11 +6,23 @@
     <title>HAPPY 16 MONTHS CATHERINE!!!</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <h1 id="personalGreeting"></h1>
         <h1>Happy 16 Months, My Love!</h1>
         <p>Catherine, each day with you is better than the last. I'm deeply in love with you and so grateful for all that you do</p>
+        <div class="controls">
+            <button id="musicBtn" onclick="toggleMusic()">🎵</button>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5" onchange="setVolume(this.value)">
+        </div>
+        <audio id="bgMusic" controls loop hidden>
+            <source src="resources/10_36.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
     </header>
     <section>
         <h2>💖 Your Kindness</h2>
@@ -72,7 +84,7 @@
         <button onclick="showMessage(7)">Show More 🎵</button>
         <div id="message7" class="hidden">
             <p>Music is richer with you. Your harmony is the soundtrack of my life</p>
-            <img src="resources/7.jpg" width="567" height="756">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7pLICtOwBnu3XLUJuuE8y8?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
     </section>
     <section>
