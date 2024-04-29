@@ -78,6 +78,11 @@ const questions = [
       options: ["Catherine", "Quang", "It varies", "We both do equally"],
       correctAnswer: 3
   },
+  {
+      question: "What did we do on our one year anniversary?",
+      options: ["Eat at Cheesecake Factory", "Go to Five Below", "Completed a puzzle", "All of the above"],
+      correctAnswer: 3
+  },
 ];
 
 let currentQuestion = 0;
@@ -112,14 +117,14 @@ function checkAnswer(selectedIndex) {
         buttons[questions[currentQuestion].correctAnswer].classList.add("correct-answer");
     }
 
-    for (let i = 0; i < buttons.length; i++) {
+    for(let i = 0; i < buttons.length; i++) {
         buttons[i].disabled = true;
     }
 }
 
 function nextQuestion() {
     currentQuestion++;
-    if (currentQuestion < questions.length) {
+    if(currentQuestion < questions.length) {
         displayQuestion();
     } else {
         displayResult();
