@@ -28,36 +28,6 @@ header {
     position: relative;
 }
 
-.controls {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#musicBtn {
-    background-color: #ff6384;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 10px; /* Space between button and slider */
-}
-
-#musicBtn:hover {
-    background-color: #ff91a4;
-}
-
-#volumeSlider {
-    width: 100px; /* Adjust width as needed */
-}
-
-
-
 h1 {
     margin: 0;
 }
@@ -128,6 +98,36 @@ img:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 16px rgba(0,0,0,0.3); 
 }
+
+/** Music player */
+.controls {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#musicBtn {
+    background-color: #ff6384;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px; 
+}
+
+#musicBtn:hover {
+    background-color: #ff91a4;
+}
+
+#volumeSlider {
+    width: 100px; 
+}
+
 
 /** Scrollbar */
 ::-webkit-scrollbar {
